@@ -1,0 +1,12 @@
+Project overview:
+
+Features:
+
+todo:
+[] get website shell up
+[] get map displayed
+   [] draw words on map
+   [] call google translate on word
+[] language grouper
+   [] run word similarity algorithm
+   [] draw colors on map
