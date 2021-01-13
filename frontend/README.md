@@ -9,4 +9,7 @@ Install [nvm](https://github.com/nvm-sh/nvm#install--update-script), then instal
 },
 ```
 
+`npm run dev` to run the site locally.
+
 Lmk if you run into trouble.
+

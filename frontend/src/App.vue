@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+<div class="flex-1 flex-col mt-10">
+  <h1 class="font-serif text-7xl">Header Text</h1>
+  <div class="my-4"><Input /></div>
+  <div><Map /></div>
+  <div>3</div>
+
+
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Input from './components/Input.vue';
+import Map from './components/Map.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Input,
+    Map,
   },
 };
 </script>
@@ -21,6 +29,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
