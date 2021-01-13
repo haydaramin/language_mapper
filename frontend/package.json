@@ -8,9 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "chroma-js": "^2.1.0",
-    "vue": "^3.0.5",
-    "world-map-vue": "^0.2.1"
+    "vue": "^3.0.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",

@@ -1,9 +1,8 @@
 <template>
 <div class="flex-1 flex-col mt-10">
-  <h1 class="font-serif text-7xl">Header Text</h1>
+  <h1 class="font-serif text-7xl">Language Mapper</h1>
   <div class="my-4"><Input /></div>
   <div><Map /></div>
-  <div>3</div>
 
 
 </div>
