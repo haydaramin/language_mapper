@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import translate from 'translate';
+import api from '@/api.js';
 export default {
   name: 'Input',
   data: function() {
@@ -18,15 +18,10 @@ export default {
       input: ''
     };
   },
-  mounted() {
-    translate.engine = 'google';
-    // translate.key = process.env.TRANSLATE_KEY;
-    translate.key = '../../keys.json';
-  },
   methods: {
     async translate() {
-      const asdf = await translate('input', 'es');
-      alert(asdf);
+      const translations = await api.translate('input', 'eng');
+      alert(translations);
     }
   }
 };
