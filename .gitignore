@@ -1,3 +1,5 @@
+# Custom Use
+uwnapi
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,node,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,node,python
@@ -156,6 +158,7 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.vscode
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -321,3 +324,22 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,linux,windows,node,python
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
