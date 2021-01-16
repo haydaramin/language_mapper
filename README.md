@@ -6,7 +6,7 @@ A map that displays linguistic commonalities for different languages and display
 ## To do
 
 - [x] Website skeleton
-- [ ] Backend
+- [x] Backend
 - [ ] Word comparison JS algorithm
   - Or see if UWN is capable of comparing
 - [ ] Mapping
