@@ -6,12 +6,11 @@
 export default {
   name: 'Map',
   props: {
-    word: String,
+    word: String
   },
-  data: function () {
-    return {
-    };
-  },
+  data: function() {
+    return {};
+  }
 };
 </script>
 

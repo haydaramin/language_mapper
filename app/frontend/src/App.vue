@@ -1,27 +1,24 @@
 <template>
-<div class="flex-1 flex-col mt-10">
-  <h1 class="font-serif text-7xl">Language Mapper</h1>
-  <div class="my-4"><Input /></div>
-  <div><Map /></div>
-
-
-</div>
+  <div class="flex flex-1 flex-col items-center">
+    <h1 class="font-serif text-7xl">Language Mapper</h1>
+    <Input class="my-4" />
+    <Map />
+  </div>
 </template>
 
 <script>
-import Input from './components/Input.vue';
 import Map from './components/Map.vue';
-
+import Input from './components/Input.vue';
 export default {
   name: 'App',
   components: {
-    Input,
     Map,
-  },
+    Input
+  }
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
