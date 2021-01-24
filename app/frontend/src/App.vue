@@ -4,18 +4,20 @@
     <Input class="my-4" />
     <div class="m-4 w-full h-full">
       <Map />
-      <!-- map -->
+      <AltMap />
     </div>
   </div>
 </template>
 
 <script>
 import Map from './components/Map.vue';
+import AltMap from './components/AltMap.vue';
 import Input from './components/Input.vue';
 export default {
   name: 'App',
   components: {
     Map,
+    AltMap,
     Input,
   },
 };
