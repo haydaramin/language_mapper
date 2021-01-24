@@ -4,8 +4,13 @@ require 'sinatra'
 require "uwn/api"
 
 uwn = Uwn::Api::Connect.new plugins_path: "./uwnapi/plugins"
+puts settings.environment # sinatra output sometimes gets this wrong
 
 get '/:lang/:word' do
+  if settings.development?
+    puts "settings cors"
+    response.headers['Access-Control-Allow-Origin'] = "*"
+  end
   meaning = uwn.meaning params['word'], params['lang']
   definitions = []
   synsets = []
@@ -17,10 +22,14 @@ get '/:lang/:word' do
   meaning.lexical_categories.each do |lexical_category|
     part_of_speech.append(lexical_category.lexcat)
   end
-  return JSON.generate [{"definitions"=>definitions}, {"parts_of_speech"=>part_of_speech}, "synsets"=>synsets]
+  return JSON.generate [{"definitions"=>definitions}, {"parts_of_speech"=>part_of_speech}, "meaning_ids"=>synsets]
 end
 
 get '/:lang/:word/:synset/translate' do
+  if settings.development?
+    puts "settings cors"
+    response.headers['Access-Control-Allow-Origin'] = "*"
+  end
   meaning = uwn.meaning params['word'], params['lang']
   translations = Hash.new
   seenLangs = Set['ase']

@@ -17,7 +17,7 @@ import * as d3 from 'd3';
 export default {
   name: 'Map',
   props: {
-    word: String, 
+    word: String,
   },
   data: function() {
     return {
@@ -118,7 +118,8 @@ export default {
   justify-items: center;
   align-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: none;
+  transform: translateY(0px);
 }
 .map-container {
   position: absolute;

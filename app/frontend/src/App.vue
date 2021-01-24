@@ -1,8 +1,11 @@
 <template>
   <div class="flex flex-1 flex-col items-center">
-    <h1 class="font-serif text-7xl">Language Mapper</h1>
+    <h1 class="font-serif mt-8 text-7xl">Language Mapper</h1>
     <Input class="my-4" />
-    <Map />
+    <div class="m-4 w-full h-full">
+      <Map />
+      <!-- map -->
+    </div>
   </div>
 </template>
 
@@ -13,8 +16,8 @@ export default {
   name: 'App',
   components: {
     Map,
-    Input
-  }
+    Input,
+  },
 };
 </script>
 
