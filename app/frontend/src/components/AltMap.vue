@@ -15,7 +15,7 @@ export default {
   },
   data: function () {
     return {
-      world: world
+      world: world,
     };
   },
 };

@@ -7,9 +7,7 @@
         class="shadow rounded text-center m-2 p-1"
         @keyup.enter="get_meanings()"
       />
-      <button @click="get_meanings()" class="bg-white text-gray-600 shadow px-2 py-1 rounded m-2">
-        Search
-      </button>
+      <button @click="get_meanings()" class="bg-white text-gray-600 shadow px-2 py-1 rounded m-2">Search</button>
     </div>
     <div
       v-if="definitions.length > 0 && show_definitions"
@@ -49,11 +47,11 @@ export default {
       this.definitions = meanings[0]['definitions'];
       this.parts_of_speech = meanings[1]['parts_of_speech'];
       this.meaning_ids = meanings[2]['meaning_ids'];
-      this.show_definitions = true
+      this.show_definitions = true;
     },
     async get_translations(meaning_id) {
       console.log(meaning_id);
-      this.show_definitions = false
+      this.show_definitions = false;
       // TODO: api request -> hand off data to maps component (use vuex?), or let maps do the api request?
     },
   },
