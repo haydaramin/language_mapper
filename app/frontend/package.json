@@ -5,37 +5,38 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "npx prettier . --write --ignore-unknown"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
-    "core-js": "^3.6.5",
-    "d3": "^6.4.0",
+    "core-js": "^3.8.3",
+    "d3": "^6.5.0",
     "datamaps": "^0.5.9",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-plugin-eslint": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1",
+    "prettier": "^2.2.1",
     "vue-datamaps": "^0.2.93",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "browser": true,
+      "es2021": true
     },
     "extends": [
       "plugin:vue/essential",
@@ -45,7 +46,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "max-len": ["error", { "code": 120 }]
+    }
   },
   "browserslist": [
     "> 1%",
@@ -53,12 +56,6 @@
     "not dead"
   ],
   "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "pre-commit": "npx prettier . --write --ignore-unknown"
   }
 }
