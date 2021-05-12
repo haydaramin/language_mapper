@@ -14,7 +14,7 @@
     "core-js": "^3.8.3",
     "d3": "^6.5.0",
     "datamaps": "^0.5.9",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^2.6.11"
   },
